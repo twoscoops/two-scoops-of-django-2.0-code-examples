@@ -1,4 +1,4 @@
-# two-scoops-of-django-2.0
+# Two Scoops of Django 2.0 Code Examples
 The official repo for Two Scoops of Django 1.11 code samples migrated to Django 2.0
 
 ## What is this?
