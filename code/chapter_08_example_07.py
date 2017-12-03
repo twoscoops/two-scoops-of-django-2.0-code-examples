@@ -37,8 +37,8 @@ given here, please contact us at info@twoscoopspress.org.
 
 # urls.py at root of project
 urlpatterns += [
-    url(r'^contact/', include('contactmonger.urls',
+    path('contact/', include('contactmonger.urls',
                                         namespace='contactmonger')),
-    url(r'^report-problem/', include('contactapp.urls',
+    path('report-problem/', include('contactapp.urls',
                                             namespace='contactapp')),
 ]

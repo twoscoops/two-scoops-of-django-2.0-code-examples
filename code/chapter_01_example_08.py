@@ -36,7 +36,7 @@ given here, please contact us at info@twoscoopspress.org.
 """
 
 patterns = [
-    url(regex='^add/$',
+    path(route='add/',
         view=views.add_topping,
         name='add-topping'),
     ]

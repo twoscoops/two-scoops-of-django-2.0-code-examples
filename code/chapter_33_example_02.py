@@ -36,4 +36,4 @@ given here, please contact us at info@twoscoopspress.org.
 """
 
 # Forgetting the 'as_view()' method
-url(r'^$',  HomePageView, name='home'),
+path(r'',  HomePageView, name='home'),

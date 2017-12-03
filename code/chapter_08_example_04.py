@@ -36,5 +36,5 @@ given here, please contact us at info@twoscoopspress.org.
 """
 
 urlpatterns += [
-    url(r'^tastings/', include('tastings.urls', namespace='tastings')),
+    path('tastings/', include('tastings.urls', namespace='tastings')),
 ]

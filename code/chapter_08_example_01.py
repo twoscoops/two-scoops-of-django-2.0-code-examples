@@ -36,18 +36,18 @@ given here, please contact us at info@twoscoopspress.org.
 """
 
 # Don't do this!
-from django.conf.urls import url
+from django.urls import path
 from django.views.generic import DetailView
 
 from tastings.models import Tasting
 
 urlpatterns = [
-    url(r'^(?P<pk>\d+)/$',
+    path('<int:pk>',
         DetailView.as_view(
             model=Tasting,
             template_name='tastings/detail.html'),
         name='detail'),
-    url(r'^(?P<pk>\d+)/results/$',
+    path('<int:pk>/results/',
         DetailView.as_view(
             model=Tasting,
             template_name='tastings/results.html'),

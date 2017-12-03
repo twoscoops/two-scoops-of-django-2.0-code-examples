@@ -35,4 +35,4 @@ If you feel your use of code examples falls outside fair use of the permission
 given here, please contact us at info@twoscoopspress.org.
 """
 
-url(r'^$',  HomePageView.as_view(), name='home'),
+path('',  HomePageView.as_view(), name='home'),

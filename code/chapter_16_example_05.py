@@ -36,20 +36,20 @@ given here, please contact us at info@twoscoopspress.org.
 """
 
 # flavors/urls.py
-from django.conf.urls import url
+from django.urls import path
 
 from flavors.api import views
 
 urlpatterns = [
     # /flavors/api/
-    url(
-        regex=r'^api/$',
+    path(
+        route='api/',
         view=views.FlavorListCreateAPIView.as_view(),
         name='flavor_rest_api'
     ),
     # /flavors/api/:slug/
-    url(
-        regex=r'^api/(?P<uuid>[-\w]+)/$',
+    path(
+        route='api/<uuid:uuid>/,
         view=views.FlavorRetrieveUpdateDestroyAPIView.as_view(),
         name='flavor_rest_api'
     )

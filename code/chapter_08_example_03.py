@@ -35,28 +35,28 @@ If you feel your use of code examples falls outside fair use of the permission
 given here, please contact us at info@twoscoopspress.org.
 """
 
-from django.conf.urls import url
+from django.urls import path
 
 from . import views
 
 urlpatterns = [
-    url(
-        regex=r'^$',
+    path(
+        route=r'',
         view=views.TasteListView.as_view(),
         name='list'
     ),
-    url(
-        regex=r'^(?P<pk>\d+)/$',
+    path(
+        route=r'<int:pk>/',
         view=views.TasteDetailView.as_view(),
         name='detail'
     ),
-    url(
-        regex=r'^(?P<pk>\d+)/results/$',
+    path(
+        route=r'<int:pk>/results/',
         view=views.TasteResultsView.as_view(),
         name='results'
     ),
-    url(
-        regex=r'^(?P<pk>\d+)/update/$',
+    path(
+        route=r'<int:pk>/update/',
         view=views.TasteUpdateView.as_view(),
         name='update'
     )

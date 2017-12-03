@@ -37,35 +37,35 @@ given here, please contact us at info@twoscoopspress.org.
 
 # core/api_urls.py
 """Called from the project root's urls.py URLConf thus:
-        url(r'^api/', include('core.api_urls', namespace='api')),
+        path('api/', include('core.api_urls', namespace='api')),
 """
-from django.conf.urls import url
+from django.urls import path
 
 from flavors.api import views as flavor_views
 from users.api import views as user_views
 
 urlpatterns = [
     # {% url 'api:flavors' %}
-    url(
-        regex=r'^flavors/$',
+    path(
+        route='flavors/',
         view=flavor_views.FlavorCreateReadView.as_view(),
         name='flavors'
     ),
     # {% url 'api:flavors' flavor.uuid %}
-    url(
-        regex=r'^flavors/(?P<uuid>[-\w]+)/$',
+    path(
+        route='flavors/<uuid:uuid>/',
         view=flavor_views.FlavorReadUpdateDeleteView.as_view(),
         name='flavors'
     ),
     # {% url 'api:users' %}
-    url(
-        regex=r'^users/$',
+    path(
+        route='users/',
         view=user_views.UserCreateReadView.as_view(),
         name='users'
     ),
     # {% url 'api:users' user.uuid %}
-    url(
-        regex=r'^users/(?P<uuid>[-\w]+)/$',
+    path(
+        route='users/<uuid:uuid>/',
         view=user_views.UserReadUpdateDeleteView.as_view(),
         name='users'
     ),
