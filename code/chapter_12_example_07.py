@@ -4,7 +4,7 @@ Using This Code Example
 
 The code examples provided are provided by Daniel Greenfeld and Audrey Roy of
 Two Scoops Press to help you reference Two Scoops of Django: Best Practices
-for Django 1.11. Code samples follow PEP-0008, with exceptions made for the
+for Django 1.11 for Django 2.0 projects. Code Samples follow  PEP-0008, with exceptions made for the
 purposes of improving book formatting. Example code is provided "as is", and
 is not intended to be, and should not be considered or labeled as "tutorial
 code".
@@ -51,7 +51,7 @@ class FlavorActionMixin:
 
     def form_valid(self, form):
         messages.info(self.request, self.success_msg)
-        return super(FlavorActionMixin, self).form_valid(form)
+        return super().form_valid(form)
 
     def form_invalid(self, form):
         """Save invalid form and model data for later reference."""

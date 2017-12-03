@@ -4,7 +4,7 @@ Using This Code Example
 
 The code examples provided are provided by Daniel Greenfeld and Audrey Roy of
 Two Scoops Press to help you reference Two Scoops of Django: Best Practices
-for Django 1.11. Code samples follow PEP-0008, with exceptions made for the
+for Django 1.11 for Django 2.0 projects. Code Samples follow  PEP-0008, with exceptions made for the
 purposes of improving book formatting. Example code is provided "as is", and
 is not intended to be, and should not be considered or labeled as "tutorial
 code".
@@ -46,7 +46,7 @@ logger = logging.getLogger(__name__)
 class PintView(TemplateView):
 
     def get_context_data(self, *args, **kwargs):
-        context = super(PintView, self).get_context_data(**kwargs)
+        context = super().get_context_data(**kwargs)
         pints_remaining = pint_counter()
         logger.debug('Only %d pints of ice cream left.' % pints_remaining)
         return context

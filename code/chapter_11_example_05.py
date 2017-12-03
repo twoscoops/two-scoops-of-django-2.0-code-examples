@@ -4,7 +4,7 @@ Using This Code Example
 
 The code examples provided are provided by Daniel Greenfeld and Audrey Roy of
 Two Scoops Press to help you reference Two Scoops of Django: Best Practices
-for Django 1.11. Code samples follow PEP-0008, with exceptions made for the
+for Django 1.11 for Django 2.0 projects. Code Samples follow  PEP-0008, with exceptions made for the
 purposes of improving book formatting. Example code is provided "as is", and
 is not intended to be, and should not be considered or labeled as "tutorial
 code".
@@ -43,7 +43,7 @@ from core.validators import validate_tasty
 
 class FlavorForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
-        super(FlavorForm, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
         self.fields['title'].validators.append(validate_tasty)
         self.fields['slug'].validators.append(validate_tasty)
 

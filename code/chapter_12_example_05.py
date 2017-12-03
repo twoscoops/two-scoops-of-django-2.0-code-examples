@@ -4,7 +4,7 @@ Using This Code Example
 
 The code examples provided are provided by Daniel Greenfeld and Audrey Roy of
 Two Scoops Press to help you reference Two Scoops of Django: Best Practices
-for Django 1.11. Code samples follow PEP-0008, with exceptions made for the
+for Django 1.11 for Django 2.0 projects. Code Samples follow  PEP-0008, with exceptions made for the
 purposes of improving book formatting. Example code is provided "as is", and
 is not intended to be, and should not be considered or labeled as "tutorial
 code".
@@ -49,7 +49,7 @@ class TasterUpdateView(LoginRequiredMixin, UpdateView):
     def get_form_kwargs(self):
         """This method is what injects forms with keyword arguments."""
         # grab the current set of form #kwargs
-        kwargs = super(TasterUpdateView, self).get_form_kwargs()
+        kwargs = super().get_form_kwargs()
         # Update the kwargs with the user_id
         kwargs['user'] = self.request.user
         return kwargs

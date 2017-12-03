@@ -4,7 +4,7 @@ Using This Code Example
 
 The code examples provided are provided by Daniel Greenfeld and Audrey Roy of
 Two Scoops Press to help you reference Two Scoops of Django: Best Practices
-for Django 1.11. Code samples follow PEP-0008, with exceptions made for the
+for Django 1.11 for Django 2.0 projects. Code Samples follow  PEP-0008, with exceptions made for the
 purposes of improving book formatting. Example code is provided "as is", and
 is not intended to be, and should not be considered or labeled as "tutorial
 code".
@@ -42,7 +42,7 @@ class IceCreamFlavorInput(TextInput):
   """Ice cream flavors must always end with 'Ice Cream'"""
 
     def get_context(self, name, value, attrs):
-        context = super(IceCreamInput, self).get_context(name, value, attrs)
+        context = super().get_context(name, value, attrs)
         value = context['widget']['value']
         if not value.strip().lower().endswith('ice cream'):
             context['widget']['value'] = '{} Ice Cream'.format(value)

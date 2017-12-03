@@ -4,7 +4,7 @@ Using This Code Example
 
 The code examples provided are provided by Daniel Greenfeld and Audrey Roy of
 Two Scoops Press to help you reference Two Scoops of Django: Best Practices
-for Django 1.11. Code samples follow PEP-0008, with exceptions made for the
+for Django 1.11 for Django 2.0 projects. Code Samples follow  PEP-0008, with exceptions made for the
 purposes of improving book formatting. Example code is provided "as is", and
 is not intended to be, and should not be considered or labeled as "tutorial
 code".
@@ -37,7 +37,7 @@ given here, please contact us at info@twoscoopspress.org.
 
     # attach this code to the previous example (12.7)
     def clean(self):
-        cleaned_data = super(IceCreamOrderForm, self).clean()
+        cleaned_data = super().clean()
         slug = cleaned_data.get('slug', '')
         toppings = cleaned_data.get('toppings', '')
 

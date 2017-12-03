@@ -4,7 +4,7 @@ Using This Code Example
 
 The code examples provided are provided by Daniel Greenfeld and Audrey Roy of
 Two Scoops Press to help you reference Two Scoops of Django: Best Practices
-for Django 1.11. Code samples follow PEP-0008, with exceptions made for the
+for Django 1.11 for Django 2.0 projects. Code Samples follow  PEP-0008, with exceptions made for the
 purposes of improving book formatting. Example code is provided "as is", and
 is not intended to be, and should not be considered or labeled as "tutorial
 code".
@@ -49,7 +49,7 @@ class IceCreamOrderForm(forms.Form):
     toppings = forms.CharField()
 
     def __init__(self, *args, **kwargs):
-        super(IceCreamOrderForm, self).__init__(*args,
+        super().__init__(*args,
                     **kwargs)
         # We dynamically set the choices here rather than
         # in the flavor field definition. Setting them in
