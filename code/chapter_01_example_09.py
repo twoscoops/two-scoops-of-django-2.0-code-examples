@@ -39,4 +39,6 @@ patterns = [
     path(route='add/',
         view=views.add_topping,
         name='add_topping'),
-    ]
+    ],
+]
+
