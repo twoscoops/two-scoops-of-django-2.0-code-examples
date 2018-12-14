@@ -49,8 +49,7 @@ class IceCreamStoreCreateForm(forms.ModelForm):
 class IceCreamStoreUpdateForm(IceCreamStoreCreateForm):
 
     def __init__(self, *args, **kwargs):
-        super(IceCreamStoreUpdateForm,
-                self).__init__(*args, **kwargs)
+        super(IceCreamStoreUpdateForm, self).__init__(*args, **kwargs)
         self.fields['phone'].required = True
         self.fields['description'].required = True
 
